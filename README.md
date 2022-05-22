@@ -1,9 +1,3 @@
-<h1 align="center">
-    <img src="/.github/assets/logo.png"
-    width="400px"
-    alt="Logo" />
-</h1>
-
 <h3 align="center">
   Google Forms
 </h3>
