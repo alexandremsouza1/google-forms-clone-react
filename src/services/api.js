@@ -1,3 +1,7 @@
+import Input from "../components/Form/Input";
+import Select from "../components/Form/Select";
+import Textarea from "../components/Form/Textarea";
+
 export function loadLists() {
   return [
     { 
@@ -6,34 +10,25 @@ export function loadLists() {
       cards: [
         {
           id: 1,
-          content: 'Estudar módulo 01 de NodeJS',
-          labels: ['#7159c1'],
-          user: 'https://api.adorable.io/avatars/285/abott@adorable.png'
+          title: 'Input',
+          type: '',
+          component: Input,
+          value: ''
         },
         {
           id: 2,
-          content: 'Criar vídeo para o Youtube ensinando a recriar a interface do Pipefy',
-          labels: ['#7159c1'],
-          user: 'https://api.adorable.io/avatars/285/a@adorable.io.png'
+          title: 'Select',
+          type: '',
+          component: Select.bind(this, { options: [{ value: '1', label: 'Opção 1' }, { value: '2', label: 'Opção 2' }] }),
+          value: ''
         },
         {
           id: 3,
-          content: 'Estudar módulo 03 de React Native',
-          labels: ['#7159c1'],
-          user: 'https://api.adorable.io/avatars/285/abott@adorable.png'
-        },
-        {
-          id: 4,
-          content: 'Gravar Aula "NextJS: Utilizando server-side rendering com ReactJS"',
-          labels: ['#54e1f7'],
-          user: 'https://api.adorable.io/avatars/285/a@adorable.io.png'
-        },
-        {
-          id: 5,
-          content: 'Gravar testes e deploy ReactJS',
-          labels: ['#54e1f7'],
-          user: 'https://api.adorable.io/avatars/285/b@adorable.io.png'
-        },
+          title: 'Textarea',
+          type: '',
+          component: Textarea,
+          value: ''
+        }
       ]
     },
     { 
