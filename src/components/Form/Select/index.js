@@ -1,13 +1,12 @@
 import React from 'react';
 
 
-export default function Select ({ options })  {
-  debugger
+export default function Select (props)  {
   return (
     <div className="select-block">
       <select>
         <option value="">Selecione uma opção</option>
-        { options && options.map(option => (
+        { props.options && props.options.map(option => (
           <option key={option.value} value={option.value}>{option.label}</option>
         ))}
       </select>

@@ -1,14 +1,28 @@
-import React, { useRef, useContext } from 'react';
+import React, { useRef, useContext, useState } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 
 import BoardContext from '../Board/context';
 
 import { Container, Label } from './styles';
+import { useDebounce } from 'use-debounce';
 import Board from '../Board';
 
 export default function Card({ data, index, listIndex }) {
   const ref = useRef();
+  const [value, setValue] = useState('');
   const { move } = useContext(BoardContext);
+  const [ propValue ] = useDebounce(value, 1000);
+
+  const onChange = (e) => {
+    setValue(e.target.value);
+  };
+
+  const formatProp = (data) => {
+    const dados = data.map((value,index) => {
+      return { 'value': index, 'label': value }
+    })
+    return (dados)
+  };
 
   const [{ isDragging }, dragRef] = useDrag({
     item: { type: 'CARD', index, listIndex },
@@ -59,7 +73,9 @@ export default function Card({ data, index, listIndex }) {
         
       </header>
       <p>{data.title}</p>
-      { data.component && <data.component /> }
+      { data.component && <data.component options={formatProp(propValue.split(','))}/> }
+      <p>Props</p>
+      <input type="text" onChange={onChange} value={value} />
     </Container>
   );
 }

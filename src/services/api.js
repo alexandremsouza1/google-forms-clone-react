@@ -19,7 +19,7 @@ export function loadLists() {
           id: 2,
           title: 'Select',
           type: '',
-          component: Select.bind(this, { options: [{ value: '1', label: 'Opção 1' }, { value: '2', label: 'Opção 2' }] }),
+          component: Select,
           value: ''
         },
         {
