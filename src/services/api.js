@@ -13,21 +13,48 @@ export function loadLists() {
           title: 'Input',
           type: '',
           component: Input,
-          value: ''
+          value: '',
+          name: '',
         },
         {
           id: 2,
           title: 'Select',
           type: '',
           component: Select,
-          value: ''
+          value: '',
+          name: '',
         },
         {
           id: 3,
           title: 'Textarea',
           type: '',
           component: Textarea,
-          value: ''
+          value: '',
+          name: '',
+        },
+        {
+          id: 4,
+          title: 'Checkbox',
+          type: 'checkbox',
+          component: Input,
+          value: '',
+          name: '',
+        },
+        {
+          id: 5,
+          title: 'Radio',
+          type: 'radio',
+          component: Input,
+          value: '',
+          name: 'radio',
+        },
+        {
+          id: 6,
+          title: 'Date',
+          type: 'date',
+          component: Input,
+          value: '',
+          name: '',
         }
       ]
     },
@@ -36,57 +63,14 @@ export function loadLists() {
       creatable: false,
       cards: [
         {
-          id: 6,
-          content: 'Recriando clone do Pipefy',
-          labels: [],
-          user: 'https://api.adorable.io/avatars/285/c@adorable.io.png'
+          id: 0,
+          title: '',
+          type: '',
+          component: null,
+          value: '',
+          name: '',
         }
       ]
-    },
-    { 
-      title: 'Pausado', 
-      creatable: false,
-      cards: [
-        {
-          id: 7,
-          content: 'Gravar sobre Geolocalização e mapas com React Native',
-          labels: ['#7159c1'],
-          user: 'https://api.adorable.io/avatars/285/b@adorable.io.png'
-        },
-        {
-          id: 8,
-          content: 'Gravar testes e deploy ReactJS',
-          labels: ['#54e1f7'],
-          user: 'https://api.adorable.io/avatars/285/c@adorable.io.png'
-        },
-        {
-          id: 9,
-          content: 'Ajustes na biblioteca unform',
-          labels: [],
-        }
-      ]
-    },
-    { 
-      title: 'Concluído', 
-      creatable: false,
-      done: true,
-      cards: [
-        {
-          id: 10,
-          content: 'Gravar aula sobre deploy e CI com React Native',
-          labels: [],
-        },
-        {
-          id: 12,
-          content: 'Gravar testes e deploy ReactJS',
-          labels: ['#54e1f7'],
-        },
-        {
-          id: 13,
-          content: 'Gravar Aula "Internacionalização de aplicações Node.js, ReactJS e React Native"',
-          labels: ['#7159c1'],
-        }
-      ]
-    },
+    }
   ];
 }

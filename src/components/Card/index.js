@@ -73,7 +73,12 @@ export default function Card({ data, index, listIndex }) {
         
       </header>
       <p>{data.title}</p>
-      { data.component && <data.component options={formatProp(propValue.split(','))}/> }
+      { data.component && 
+            <data.component 
+              options={formatProp(propValue.split(','))}
+              type={data.type}
+              name={data.name}
+            /> }
       <p>Props</p>
       <input type="text" onChange={onChange} value={value} />
     </Container>
