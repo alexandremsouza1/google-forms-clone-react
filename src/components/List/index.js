@@ -8,7 +8,7 @@ import { Container } from './styles';
 
 export default function List({ data, index: listIndex , size}) {
   return (
-    <Container done={data.done} size={size}>
+    <Container size={size}>
       <header>
         <h2>{data.title}</h2>
         {data.creatable && (
