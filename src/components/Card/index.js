@@ -1,16 +1,13 @@
-import React, { useRef, useContext, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 
-import BoardContext from '../Board/context';
-
-import { Container, Label } from './styles';
+import { Container } from './styles';
 import { useDebounce } from 'use-debounce';
-import Board from '../Board';
+
 
 export default function Card({ data, index, listIndex }) {
   const ref = useRef();
   const [value, setValue] = useState('');
-  const { move } = useContext(BoardContext);
   const [ propValue ] = useDebounce(value, 1000);
 
   const onChange = (e) => {
@@ -33,7 +30,7 @@ export default function Card({ data, index, listIndex }) {
 
   const [, dropRef] = useDrop({
     accept: 'CARD',
-    hover(item, monitor) {
+    /* hover(item, monitor) {
       const draggedListIndex = item.listIndex;
       const targetListIndex = listIndex;
 
@@ -62,7 +59,7 @@ export default function Card({ data, index, listIndex }) {
 
       item.index = targetIndex;
       item.listIndex = targetListIndex;
-    }
+    } */
   })
 
   dragRef(dropRef(ref));

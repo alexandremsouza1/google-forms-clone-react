@@ -7,6 +7,7 @@ export function loadLists() {
     { 
       title: 'Perguntas', 
       creatable: true,
+      size: 320,
       cards: [
         {
           id: 1,
@@ -61,6 +62,7 @@ export function loadLists() {
     { 
       title: 'Formulário', 
       creatable: false,
+      size: window.screen.width - 400,
       cards: [
         {
           id: 0,
